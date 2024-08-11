@@ -3,11 +3,11 @@ const Player = require("../models/Player.js");
 
 const router = Router();
 
-router.post("/", async (req, res) => {
+router.delete("/:id", async (req, res) => {
   try {
-    const data = Player(req.body);
-    await data.save();
-    res.status(200).json(data);
+    const { id } = req.params;
+    const data = await Player.findByIdAndDelete(id);
+    res.status(201).json(data);
   } catch (error) {
     res.status(400).json({ message: error.message });
   }
