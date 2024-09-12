@@ -9,6 +9,10 @@ const TournamentSchema = new Schema({
     type: String,
     required: true,
   },
+  inscriptionType: {
+    type: String,
+    required: true,
+  },
   players: {
     type: String,
   },

@@ -6,8 +6,9 @@ const router = Router();
 router.put("/:id", async (req, res) => {
   try {
     const { id } = req.params;
-    const data = await Player.findByIdAndUpdate(id);
-    res.status(201).json(data);
+    const playerModify = req.body;
+    await Player.findByIdAndUpdate(id, playerModify);
+    res.status(201).json({ message: "Se ha modificado correctamente" });
   } catch (error) {
     res.status(400).json({ message: error.message });
   }
