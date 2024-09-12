@@ -4,11 +4,20 @@ const ClubSchema = new Schema({
   name: {
     type: String,
   },
+  location: {
+    type: String,
+  },
+  phone: {
+    type: Number,
+  },
   email: {
     type: String,
   },
   password: {
     type: String,
+  },
+  courts: {
+    type: Number,
   },
   tournament: {
     type: String,
