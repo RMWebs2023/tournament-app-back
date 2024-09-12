@@ -1,7 +1,7 @@
 const { Router } = require("express");
-const getPlayer = require("./getPlayer.routes.js");
-const postPlayer = require("./postPlayer.routes.js");
-const deletePlayer = require("./deletePlayer.routes.js");
+const getPlayer = require("./routesPlayer/getPlayer.routes.js");
+const postPlayer = require("./routesPlayer/postPlayer.routes.js");
+const deletePlayer = require("./routesPlayer/deletePlayer.routes.js");
 
 const router = Router();
 
